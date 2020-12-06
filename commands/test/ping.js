@@ -18,7 +18,7 @@ module.exports = class PingCommand extends Command {
         });
     }
 
-    run(msg, { name }) {
-        msg.reply('Hello ' + name);
+    run(message, { name }) {
+        message.reply('Hello ' + name);
     }
 };
