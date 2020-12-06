@@ -20,7 +20,16 @@ bot.on('ready', () => {
 });
 
 bot.on('message', msg => {
-    if(msg.content.startsWith(prefix + 'bye')) {
+    if (msg.content.startsWith(prefix + 'ping')) {
+        msg.reply('pong');
+    } else if (msg.content.startsWith(prefix + 'hello')) {
+        var content = msg.content.trim().split(' ');
+        msg.reply('Hello ' + content[1]);
+    } else if (msg.content.startsWith(prefix + 'bye')) {
         msg.reply('bye!');
+    } else if (msg.content.startsWith(prefix + 'fwoosh')) {
+        msg.reply('swoosh!');
+    } else if (msg.content.startsWith(prefix + 'youtube')) {
+        msg.reply('https://wwww.youtube.com')
     }
 });
