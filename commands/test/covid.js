@@ -21,6 +21,7 @@ module.exports = class CovidCommand extends Command {
 
     run(message, { date }) {
         // TODO make sure date is right format otherwise reply with error message
+        var regEx = new RegExp('^\d{1,2}/\d{1,2}/\d{4}$');
 
         message.reply('finding data for ' + date + "...")
         scraper.scrape(date).then(function (response) {
