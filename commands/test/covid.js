@@ -20,7 +20,11 @@ module.exports = class CovidCommand extends Command {
     }
 
     run(message, { date }) {
+        // TODO make sure date is right format otherwise reply with error message
+
         message.reply('finding data for ' + date + "...")
-        message.reply(scraper.scrape(date));
+        scraper.scrape(date).then(function (response) {
+            message.reply(response);
+        })
     }
 };
