@@ -31,6 +31,6 @@ bot.on('message', msg => {
     } else if (msg.content.startsWith(prefix + 'fwoosh')) {
         msg.reply('swoosh!');
     } else if (msg.content.startsWith(prefix + 'youtube')) {
-        msg.reply('https://wwww.youtube.com')
+        msg.reply('https://www.youtube.com')
     }
 });
