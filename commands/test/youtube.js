@@ -1,7 +1,7 @@
 const { Command } = require('discord.js-commando');
 
 // Command export
-module.exports = class GreetCommand extends Command {
+module.exports = class YoutubeCommand extends Command {
     constructor(client) {
         super(client, {
             name: 'youtube',

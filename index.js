@@ -1,7 +1,8 @@
 require('dotenv-flow').config();
 
-const { CommandoClient } = require('discord.js-commando');
 const prefix = "!"
+const { CommandoClient } = require('discord.js-commando');
+const covidScraper = require('./covidScraper');
 const bot = new CommandoClient({
 	commandPrefix: prefix,
 });
